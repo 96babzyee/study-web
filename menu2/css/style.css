@@ -1,0 +1,62 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    background-color: rgb(254, 219, 255);
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+nav {
+    background-color: tomato;
+    text-align: center;
+}
+
+ nav .menu { /* ul */
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    display: inline-block;
+    padding: 16px;
+}
+
+nav .menu li {
+     display: inline-block; /* 메뉴를 가로로 정렬 */
+     padding: 0 25px;
+}
+
+nav .menu .dropdown .dropdown-content {
+    position: absolute; /* Link1,2,3 메뉴 Django밑으로 내림 */
+    background-color: tomato;
+    min-width: 80.45px;
+    display: none;
+}
+
+nav .menu .dropdown .dropdown-content a {
+    display: block;  /* Link1,2,3 메뉴를 세로로 정렬 */
+    text-align: left;
+}
+
+nav .menu li:hover .dropdown-content {
+    display: block;
+}
+
+@media(max-width:500px) {
+    nav .menu li {
+        display: block;
+    }
+    nav .menu .dropdown .dropdown-content{
+        position: relative;
+    }
+}
